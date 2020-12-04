@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Onboarding Suite" parallel="tests">
+
+<listeners>
+<listener class-name="Resource.ExtentReporterNG"/>
+<listener class-name="Resource.ScreenshotListeners"/>
+</listeners>
+
+ <test name="OnboardEmployee_without_QR_Code_TestMethods">
+ <classes>
+      <class name="OnboardingPOM.OnboardEmployee_without_QR_Code_TestMethods"/>
+ </classes>
+ </test>
+    
+<test name="OnboardEmployee_with_QR_Code_TestMethods">
+<classes>
+      <class name="OnboardingPOM.OnboardEmployee_with_QR_Code_TestMethods"/>
+        <methods>
+          <include name="Onboard_Employee_with_AlreadyExistedMobileNumber"/>
+        </methods>
+        </class>
+</classes>
+</test>
+</suite>
